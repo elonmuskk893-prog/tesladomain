@@ -536,26 +536,36 @@ function SocialSection() {
         <SectionTitle pre="Follow" hi="Tesla" post="Official" sub="Verified official social media accounts of Tesla worldwide." />
       </Reveal>
       <div className="mx-auto mt-10 max-w-xl space-y-4">
-        {SOCIALS.map((s, idx) => (
-          <Reveal key={s.handle} delay={idx * 70}>
-            <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-<span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1">
-                <TeslaMark className="h-full w-full" />
-              </span>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-1 font-bold text-ink">
-                  {s.name} <BadgeCheck className="h-4 w-4 text-info" />
+        {SOCIALS.map((s, idx) => {
+          const Logo = s.brand === "x" ? XLogo : s.brand === "facebook" ? FacebookLogo : InstagramLogo;
+          return (
+            <Reveal key={s.url} delay={idx * 70}>
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open Tesla on ${s.brand}`}
+                className="flex items-center gap-4 rounded-3xl border border-border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5 active:scale-[0.99]"
+              >
+                <span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1">
+                  <TeslaMark className="h-full w-full" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1 font-bold text-ink">
+                    {s.name} <BadgeCheck className="h-4 w-4 text-info" />
+                  </div>
+                  <div className="text-sm text-ink-soft">{s.handle}</div>
+                  <p className="mt-2 text-sm text-ink-soft">{s.label}</p>
+                  <p className="mt-2 text-xs text-ink-soft">{s.followers}</p>
                 </div>
-                <div className="text-sm text-ink-soft">{s.handle}</div>
-                <p className="mt-2 text-sm text-ink-soft">{s.label}</p>
-                <p className="mt-2 text-xs text-ink-soft">{s.followers}</p>
-              </div>
-              <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-full text-lg font-bold ${s.accent}`}>
-                {s.icon}
-              </span>
-            </div>
-          </Reveal>
-        ))}
+                <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-full ${s.accent}`}>
+                  <Logo className="h-5 w-5" />
+                </span>
+              </a>
+            </Reveal>
+          );
+        })}
+
       </div>
     </section>
   );
