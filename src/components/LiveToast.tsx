@@ -40,7 +40,8 @@ export function LiveToast() {
   const p = TOAST_PEOPLE[i]!;
 
 return (
-    <div className="pointer-events-none absolute top-full left-1/2 z-40 mt-1.5 w-[82%] max-w-sm -translate-x-1/2">
+    <div className="pointer-events-none fixed bottom-4 left-1/2 z-40 w-[82%] max-w-sm -translate-x-1/2 sm:left-5 sm:translate-x-0">
+
       <div
         key={i}
         className={`overflow-hidden rounded-2xl bg-card shadow-toast ring-1 ring-border transition-all duration-[450ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
@@ -88,3 +89,4 @@ return (
     </div>
   );
 }
+    
