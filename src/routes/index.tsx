@@ -161,7 +161,9 @@ function Hero() {
         </p>
         <div className="mt-8 space-y-3">
           <Link
-                        className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
+            to="/claim"
+            search={{ car: "" }}
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
           >
             🚗 Claim Your Free Car →
           </Link>
