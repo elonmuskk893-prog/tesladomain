@@ -45,6 +45,7 @@ function PayPage() {
           <p className="mt-2 text-shell-muted">Start a new claim to continue.</p>
           <Link
             to="/claim"
+            search={{ car: "" }}
             className="mt-6 inline-block rounded-xl bg-brand px-5 py-3 font-bold text-primary-foreground"
           >
             Start a claim
