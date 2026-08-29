@@ -33,9 +33,8 @@ import {
   TRUST_ITEMS,
 } from "@/lib/site-data";
 import ceo from "@/assets/ceo.jpg";
-import model3Asset from "@/assets/model3.jpg.asset.json";
-
-const model3 = model3Asset.url;
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { SubscribeButton } from "@/components/SubscribeButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -114,6 +113,7 @@ function Home() {
       <Hero />
       <CarPicker />
       <Announcement />
+      <WinnersProof />
       <CeoSection />
       <Testimonials />
       <SocialSection />
@@ -342,6 +342,44 @@ function CommentsList() {
         {expanded ? "Show fewer comments" : "View 70,842 more comments"}
       </button>
     </div>
+  );
+}
+
+function WinnersProof() {
+  return (
+    <section className="bg-shell px-5 py-16 text-shell-fg">
+      <Reveal>
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+            More <span className="text-brand">Proof</span> from Winners
+          </h2>
+          <p className="mt-4 leading-relaxed text-shell-muted">
+            Watch real testimonials from Tesla car recipients around the world.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={100}>
+        <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
+          <YouTubeEmbed id="XDkzm_LR0Co" title="Tesla Global winner testimonials" />
+          <div className="bg-shell-raised px-4 py-4">
+            <div className="flex items-center justify-between gap-3">
+              <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white p-1">
+                <TeslaMark className="h-full w-full" />
+              </span>
+              <div className="mr-auto">
+                <div className="flex items-center gap-1 text-sm font-bold">
+                  Tesla Global <BadgeCheck className="h-4 w-4 text-info" />
+                </div>
+                <div className="text-xs text-shell-muted">12.8M subscribers</div>
+              </div>
+              <SubscribeButton channel="tesla-global" />
+            </div>
+          </div>
+          <CommentsList />
+        </div>
+      </Reveal>
+    </section>
   );
 }
 
