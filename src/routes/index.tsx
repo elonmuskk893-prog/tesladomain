@@ -623,7 +623,8 @@ function ModelCatalog() {
                   <p className="mt-1 text-xs text-ink-soft">Covers shipping, customs &amp; logistics</p>
                 </div>
                 <Link
-                                    search={{ car: car.id }}
+                  to="/claim"
+                  search={{ car: car.id }}
                   className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-4 font-bold text-primary-foreground transition-transform hover:bg-brand-strong active:scale-[0.98]"
                 >
                   🚗 Claim This Tesla Now →
