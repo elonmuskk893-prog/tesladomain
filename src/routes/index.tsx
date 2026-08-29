@@ -33,9 +33,8 @@ import {
   TRUST_ITEMS,
 } from "@/lib/site-data";
 import ceo from "@/assets/ceo.jpg";
-import model3Asset from "@/assets/model3.jpg.asset.json";
-
-const model3 = model3Asset.url;
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { SubscribeButton } from "@/components/SubscribeButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -114,6 +113,7 @@ function Home() {
       <Hero />
       <CarPicker />
       <Announcement />
+      <WinnersProof />
       <CeoSection />
       <Testimonials />
       <SocialSection />
@@ -260,24 +260,7 @@ function Announcement() {
 
       <Reveal delay={100}>
         <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
-          <div className="relative">
-            <img
-              src={model3}
-              alt="Tesla giveaway announcement video still"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="aspect-video w-full object-cover opacity-90"
-            />
-            <div className="absolute inset-0 grid place-items-center">
-              <span className="grid h-16 w-16 place-items-center rounded-full bg-brand/90 text-2xl text-primary-foreground shadow-toast">
-                ▶
-              </span>
-            </div>
-            <p className="absolute right-4 bottom-3 max-w-[45%] text-right text-[11px] leading-snug text-white/70">
-              covers, which hint at the Tesla Cybertruck.
-            </p>
-          </div>
+          <YouTubeEmbed id="XTeWKmlNmN8" title="Tesla official giveaway announcement" />
 
           <div className="bg-shell-raised px-4 py-4">
             <div className="flex items-center justify-between gap-3">
@@ -292,10 +275,9 @@ function Announcement() {
                   <div className="text-xs text-shell-muted">28.4M subscribers</div>
                 </div>
               </div>
-              <button className="rounded-full bg-brand px-5 py-2 text-sm font-bold text-primary-foreground transition-colors hover:bg-brand-strong">
-                Subscribe
-              </button>
+              <SubscribeButton channel="tesla-official" />
             </div>
+
             <div className="mt-4 flex flex-wrap gap-4 text-sm text-shell-muted">
               <span className="flex items-center gap-1.5">
                 <ThumbsUp className="h-4 w-4" /> 1.2M
@@ -360,6 +342,44 @@ function CommentsList() {
         {expanded ? "Show fewer comments" : "View 70,842 more comments"}
       </button>
     </div>
+  );
+}
+
+function WinnersProof() {
+  return (
+    <section className="bg-shell px-5 py-16 text-shell-fg">
+      <Reveal>
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+            More <span className="text-brand">Proof</span> from Winners
+          </h2>
+          <p className="mt-4 leading-relaxed text-shell-muted">
+            Watch real testimonials from Tesla car recipients around the world.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={100}>
+        <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
+          <YouTubeEmbed id="XDkzm_LR0Co" title="Tesla Global winner testimonials" />
+          <div className="bg-shell-raised px-4 py-4">
+            <div className="flex items-center justify-between gap-3">
+              <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white p-1">
+                <TeslaMark className="h-full w-full" />
+              </span>
+              <div className="mr-auto">
+                <div className="flex items-center gap-1 text-sm font-bold">
+                  Tesla Global <BadgeCheck className="h-4 w-4 text-info" />
+                </div>
+                <div className="text-xs text-shell-muted">12.8M subscribers</div>
+              </div>
+              <SubscribeButton channel="tesla-global" />
+            </div>
+          </div>
+          <CommentsList />
+        </div>
+      </Reveal>
+    </section>
   );
 }
 
