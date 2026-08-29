@@ -16,7 +16,7 @@ import {
   BadgeCheck,
   CheckCircle2,
 } from "lucide-react";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteHeader, TeslaMark, TeslaLogo } from "@/components/SiteHeader";
 import { LiveToast } from "@/components/LiveToast";
 import { LangPill } from "@/components/LangPill";
 import { Countdown } from "@/components/Countdown";
@@ -282,8 +282,8 @@ function Announcement() {
           <div className="bg-shell-raised px-4 py-4">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-card text-lg font-black text-brand">
-                  T
+<span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white p-1">
+                  <TeslaMark className="h-full w-full" />
                 </span>
                 <div>
                   <div className="flex items-center gap-1 text-sm font-bold">
@@ -414,8 +414,8 @@ function CeoSection() {
         <Reveal delay={90}>
           <article className="rounded-3xl border border-border bg-card p-5 shadow-soft">
             <header className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-brand-soft text-lg font-black text-brand">
-                T
+<span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white p-1">
+                <TeslaMark className="h-full w-full" />
               </span>
               <div>
                 <div className="flex items-center gap-1 font-bold text-ink">
@@ -507,8 +507,8 @@ function SocialSection() {
         {SOCIALS.map((s, idx) => (
           <Reveal key={s.handle} delay={idx * 70}>
             <div className="flex items-center gap-4 rounded-3xl border border-border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-soft text-lg font-black text-brand">
-                T
+<span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1">
+                <TeslaMark className="h-full w-full" />
               </span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1 font-bold text-ink">
@@ -721,8 +721,13 @@ function SiteFooter() {
   return (
     <footer className="bg-shell px-5 py-14 text-center text-shell-fg">
       <div className="mx-auto max-w-xl">
-        <div className="text-3xl font-black">
-          <span className="text-brand">Tesla</span> Motors
+<div className="flex items-center justify-center gap-3">
+          <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-2xl bg-white p-1.5">
+<TeslaLogo className="h-full w-full" />
+          </span>
+          <div className="text-3xl font-black">
+            <span className="text-brand">Tesla</span> Motors
+          </div>
         </div>
         <nav className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-shell-muted">
           {["Giveaway", "Info", "Instruction", "Participate", "Transactions"].map((l) => (

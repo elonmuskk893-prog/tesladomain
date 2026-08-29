@@ -1,4 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { TeslaMark } from "@/components/SiteHeader";
 import { useMemo, useState } from "react";
 import { ArrowLeft, User, MapPin, ChevronsUpDown, Truck, Clock } from "lucide-react";
 import { CARS, DELIVERY_OPTIONS } from "@/lib/site-data";
@@ -80,8 +81,8 @@ function ClaimPage() {
         <Link to="/" aria-label="Back" className="rounded-md p-1 hover:bg-white/10">
           <ArrowLeft className="h-5 w-5" />
         </Link>
-        <span className="grid h-8 w-8 place-items-center rounded-full bg-card text-sm font-black text-brand">
-          T
+<span className="grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-white p-1">
+          <TeslaMark className="h-full w-full" />
         </span>
         <h1 className="text-lg font-bold">Tesla Car Giveaway — Claim Your Car</h1>
       </header>
