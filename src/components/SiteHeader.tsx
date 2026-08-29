@@ -56,6 +56,7 @@ export function SiteHeader() {
             ))}
             <Link
               to="/claim"
+              search={{ car: "" }}
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex items-center justify-center rounded-xl bg-brand px-4 py-3 font-semibold text-primary-foreground shadow-soft hover:bg-brand-strong"
             >

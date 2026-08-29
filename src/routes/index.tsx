@@ -161,8 +161,7 @@ function Hero() {
         </p>
         <div className="mt-8 space-y-3">
           <Link
-            to="/claim"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
+                        className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
           >
             🚗 Claim Your Free Car →
           </Link>
@@ -552,8 +551,7 @@ function HowToClaim() {
       <Reveal delay={200}>
         <div className="mx-auto mt-8 max-w-xl">
           <Link
-            to="/claim"
-            className="flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-5 text-center text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
+                        className="flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-5 text-center text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
           >
             🚗 Start Claiming Your Tesla Now →
           </Link>
@@ -621,8 +619,7 @@ function ModelCatalog() {
                   <p className="mt-1 text-xs text-ink-soft">Covers shipping, customs &amp; logistics</p>
                 </div>
                 <Link
-                  to="/claim"
-                  search={{ car: car.id }}
+                                    search={{ car: car.id }}
                   className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-4 font-bold text-primary-foreground transition-transform hover:bg-brand-strong active:scale-[0.98]"
                 >
                   🚗 Claim This Tesla Now →
