@@ -722,8 +722,8 @@ function SiteFooter() {
     <footer className="bg-shell px-5 py-14 text-center text-shell-fg">
       <div className="mx-auto max-w-xl">
 <div className="flex items-center justify-center gap-3">
-          <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-2xl bg-white p-1.5">
-<TeslaLogo className="h-full w-full" />
+<span className="grid h-16 w-16 place-items-center rounded-2xl bg-white p-2">
+            <TeslaLogo className="h-[48px] w-auto" />
           </span>
           <div className="text-3xl font-black">
             <span className="text-brand">Tesla</span> Motors

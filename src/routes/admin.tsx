@@ -114,8 +114,8 @@ function SignIn({ onDone }: { onDone: () => void }) {
   return (
     <div className="grid min-h-screen place-items-center bg-shell px-5 text-shell-fg">
       <div className="w-full max-w-sm animate-rise text-center">
-<span className="mx-auto grid h-20 w-20 place-items-center overflow-hidden rounded-2xl bg-white p-2">
-          <TeslaLogo className="h-full w-full" />
+<span className="mx-auto grid h-24 w-24 place-items-center rounded-2xl bg-white p-3">
+          <TeslaLogo className="h-[72px] w-auto" />
         </span>
         <h1 className="mt-6 text-3xl font-black">Tesla Giveaway Admin</h1>
         <p className="mt-2 text-sm text-shell-muted">Sign in with your admin email and password.</p>
