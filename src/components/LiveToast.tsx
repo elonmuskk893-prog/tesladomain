@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { TOAST_PEOPLE } from "@/lib/site-data";
 
-const DURATION = 5000;
+const DURATION = 5000; // how long each popup stays visible
+const GAP = 5000; // hidden time between popups -> one popup every 10s
 const FADE = 450;
 
 export function LiveToast() {
@@ -14,22 +15,26 @@ export function LiveToast() {
     return () => clearTimeout(enter);
   }, []);
 
+  // While visible: run the progress line, then hide.
   useEffect(() => {
-    if (!show) {
-      setRun(false);
-      return;
-    }
+    if (!show) return;
     const raf = requestAnimationFrame(() => setRun(true));
     const out = setTimeout(() => setShow(false), DURATION);
-    const next = setTimeout(() => {
-      setI((n) => (n + 1) % TOAST_PEOPLE.length);
-      setShow(true);
-    }, DURATION + FADE);
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(out);
-      clearTimeout(next);
     };
+  }, [show, i]);
+
+  // While hidden: reset the progress line, then bring the next popup in.
+  useEffect(() => {
+    if (show) return;
+    setRun(false);
+    const next = setTimeout(() => {
+      setI((n) => (n + 1) % TOAST_PEOPLE.length);
+      setShow(true);
+    }, GAP);
+    return () => clearTimeout(next);
   }, [show, i]);
 
   const p = TOAST_PEOPLE[i]!;
