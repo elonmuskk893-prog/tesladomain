@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import teslaLogo from "@/assets/tesla-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
