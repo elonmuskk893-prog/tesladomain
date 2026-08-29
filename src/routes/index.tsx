@@ -553,7 +553,9 @@ function HowToClaim() {
       <Reveal delay={200}>
         <div className="mx-auto mt-8 max-w-xl">
           <Link
-                        className="flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-5 text-center text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
+            to="/claim"
+            search={{ car: "" }}
+            className="flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-5 text-center text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
           >
             🚗 Start Claiming Your Tesla Now →
           </Link>
