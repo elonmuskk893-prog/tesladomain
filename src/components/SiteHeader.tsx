@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import teslaLogo from "@/assets/tesla-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -71,14 +72,12 @@ export function SiteHeader() {
 
 export function TeslaMark() {
   return (
-    <div className="grid h-10 w-10 place-items-center">
-      <svg viewBox="0 0 100 100" className="h-9 w-9 text-brand" aria-hidden>
-        <path
-          fill="currentColor"
-          d="M50 14c14 0 27 3 38 8l-9 12c-8-4-18-6-29-6s-21 2-29 6l-9-12c11-5 24-8 38-8Zm0 26 12 4v34h-8V52l-4-1-4 1v26h-8V44l12-4Z"
-        />
-      </svg>
-      <div className="text-[10px] font-bold tracking-widest text-brand -mt-1">TESLA</div>
-    </div>
+    <img
+      src={teslaLogo.url}
+      alt="Tesla logo"
+      width={800}
+      height={1024}
+      className="h-10 w-auto object-contain"
+    />
   );
 }

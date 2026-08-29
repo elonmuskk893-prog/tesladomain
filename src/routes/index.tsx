@@ -33,7 +33,9 @@ import {
   TRUST_ITEMS,
 } from "@/lib/site-data";
 import ceo from "@/assets/ceo.jpg";
-import model3 from "@/assets/model3.jpg";
+import model3Asset from "@/assets/model3.jpg.asset.json";
+
+const model3 = model3Asset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
