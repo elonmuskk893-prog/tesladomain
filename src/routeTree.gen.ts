@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ClaimRouteImport } from './routes/claim'
 import { Route as PayRouteImport } from './routes/pay'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClaimRoute = ClaimRouteImport.update({
@@ -31,30 +37,34 @@ const PayRoute = PayRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/claim': typeof ClaimRoute
   '/pay': typeof PayRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/claim': typeof ClaimRoute
   '/pay': typeof PayRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/claim': typeof ClaimRoute
   '/pay': typeof PayRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/claim' | '/pay'
+  fullPaths: '/' | '/admin' | '/claim' | '/pay'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/claim' | '/pay'
-  id: '__root__' | '/' | '/claim' | '/pay'
+  to: '/' | '/admin' | '/claim' | '/pay'
+  id: '__root__' | '/' | '/admin' | '/claim' | '/pay'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   ClaimRoute: typeof ClaimRoute
   PayRoute: typeof PayRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/claim': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   ClaimRoute: ClaimRoute,
   PayRoute: PayRoute,
 }
