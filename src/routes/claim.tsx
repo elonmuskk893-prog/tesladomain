@@ -4,11 +4,11 @@ import { ArrowLeft, User, MapPin, ChevronsUpDown, Truck, Clock } from "lucide-re
 import { CARS, DELIVERY_OPTIONS } from "@/lib/site-data";
 import { store, type Submission } from "@/lib/admin-store";
 
-type Search = { car?: string };
+type Search = { car: string };
 
 export const Route = createFileRoute("/claim")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    car: typeof s.car === "string" ? s.car : undefined,
+    car: typeof s["car"] === "string" ? (s["car"] as string) : "",
   }),
   head: () => ({
     meta: [
