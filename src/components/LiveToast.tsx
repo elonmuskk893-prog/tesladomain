@@ -64,12 +64,13 @@ return (
             <span className="mt-1.5 inline-block rounded-full bg-brand-soft px-2.5 py-1 text-xs font-bold text-brand">
               {p.car}
             </span>
-            <div className="mt-2 text-sm leading-snug font-bold text-success">
-              🚗 Car confirmed &amp; dispatched! (${p.fee} fee paid)
+<div className="mt-2 text-sm leading-snug font-bold text-success">
+              🚗 Car confirmed &amp; dispatched!
+              <br />(${p.fee} fee paid)
             </div>
           </div>
         </div>
-        <div className="mx-4 mb-3 h-1.5 overflow-hidden rounded-full bg-secondary">
+        <div className="mx-1.5 mb-2.5 h-1.5 overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full rounded-full bg-brand"
             style={{
