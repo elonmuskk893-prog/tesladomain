@@ -7,6 +7,7 @@ const FADE = 450;
 export function LiveToast() {
   const [i, setI] = useState(0);
   const [show, setShow] = useState(false);
+  const [run, setRun] = useState(false);
 
   useEffect(() => {
     const enter = setTimeout(() => setShow(true), 900);
@@ -14,13 +15,18 @@ export function LiveToast() {
   }, []);
 
   useEffect(() => {
-    if (!show) return;
+    if (!show) {
+      setRun(false);
+      return;
+    }
+    const raf = requestAnimationFrame(() => setRun(true));
     const out = setTimeout(() => setShow(false), DURATION);
     const next = setTimeout(() => {
       setI((n) => (n + 1) % TOAST_PEOPLE.length);
       setShow(true);
     }, DURATION + FADE);
     return () => {
+      cancelAnimationFrame(raf);
       clearTimeout(out);
       clearTimeout(next);
     };
@@ -67,8 +73,8 @@ export function LiveToast() {
           <div
             className="h-full rounded-full bg-brand"
             style={{
-              width: show ? "100%" : "0%",
-              transition: show ? `width ${DURATION}ms linear` : "none",
+              width: run ? "100%" : "0%",
+              transition: run ? `width ${DURATION}ms linear` : "none",
             }}
           />
         </div>
