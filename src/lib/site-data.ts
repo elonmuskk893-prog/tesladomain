@@ -117,10 +117,11 @@ export const LIVE_DELIVERIES = [
 ];
 
 export const SOCIALS = [
-  { name: "Tesla Official", handle: "@Tesla · Official Account", tone: "bg-brand", icon: "𝕏", followers: "28.4M followers", label: "Official Tesla X account.", accent: "bg-black text-white" },
-  { name: "Tesla", handle: "@Tesla", tone: "bg-info", icon: "f", followers: "14.2M likes", label: "Official Tesla Facebook page.", accent: "bg-[oklch(0.5_0.18_252)] text-white" },
-  { name: "Tesla", handle: "@teslamotors", tone: "bg-model-violet", icon: "◎", followers: "12.8M followers", label: "Official Tesla Instagram.", accent: "bg-gradient-to-tr from-fuchsia-500 via-rose-500 to-amber-400 text-white" },
+  { name: "Tesla Official", handle: "@Tesla · Official Account", brand: "x" as const, followers: "28.4M followers", label: "Official Tesla X account.", url: "https://x.com/tesla?s=21", accent: "bg-black text-white" },
+  { name: "Tesla", handle: "@Tesla", brand: "facebook" as const, followers: "14.2M likes", label: "Official Tesla Facebook page.", url: "https://www.facebook.com/share/1BiupCjt4G/?mibextid=wwXIfr", accent: "bg-[oklch(0.5_0.18_252)] text-white" },
+  { name: "Tesla", handle: "@teslamotors", brand: "instagram" as const, followers: "12.8M followers", label: "Official Tesla Instagram.", url: "https://www.instagram.com/teslamotors?igsi=dzRkOHh2Z3ozNDRj", accent: "bg-gradient-to-tr from-fuchsia-500 via-rose-500 to-amber-400 text-white" },
 ];
+
 
 export const BADGE_STYLES: Record<Car["badgeTone"], string> = {
   gold: "bg-amber-100 text-amber-800",
