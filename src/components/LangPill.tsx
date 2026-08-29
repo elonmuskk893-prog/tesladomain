@@ -8,7 +8,7 @@ export function LangPill() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
-  const active = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
+  const active = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0]!;
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
