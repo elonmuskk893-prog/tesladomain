@@ -79,7 +79,7 @@ function PayPage() {
   return (
     <div className="min-h-screen bg-shell pb-16 text-shell-fg">
       <header className="sticky top-0 z-30 flex items-center gap-3 border-b border-white/10 bg-shell/95 px-4 py-4 backdrop-blur">
-        <Link to="/claim" aria-label="Back" className="rounded-md p-1 hover:bg-white/10">
+        <Link to="/claim" search={{ car: "" }} aria-label="Back" className="rounded-md p-1 hover:bg-white/10">
           <ArrowLeft className="h-5 w-5" />
         </Link>
         <span className="grid h-8 w-8 place-items-center rounded-full bg-card text-sm font-black text-brand">
