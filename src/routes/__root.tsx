@@ -128,6 +128,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
+        <div
+          role="note"
+          className="w-full border-b border-brand/40 bg-brand/15 px-3 py-2 text-center text-[11px] leading-snug font-semibold tracking-wide text-brand sm:text-xs"
+        >
+          <span className="font-black">NOT A REAL TESLA GIVEAWAY SITE</span>
+          <span className="mx-1.5 opacity-60">—</span>
+          <span className="font-medium">
+            This website is a fictional concept created for use in a movie and is not a real
+            giveaway.
+          </span>
+        </div>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
       </LanguageProvider>
