@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { ArrowLeft, Upload, CheckCircle2 } from "lucide-react";
 import { store, type Submission } from "@/lib/admin-store";
 
-type Search = { id?: string };
+type Search = { id: string };
 
 export const Route = createFileRoute("/pay")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    id: typeof s.id === "string" ? s.id : undefined,
+    id: typeof s["id"] === "string" ? (s["id"] as string) : "",
   }),
   head: () => ({
     meta: [

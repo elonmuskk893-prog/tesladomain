@@ -34,8 +34,8 @@ const field =
 function ClaimPage() {
   const { car: carParam } = Route.useSearch();
   const navigate = useNavigate();
-  const [carId, setCarId] = useState(carParam ?? CARS[0].id);
-  const [delivery, setDelivery] = useState(DELIVERY_OPTIONS[0].id);
+  const [carId, setCarId] = useState(carParam || CARS[0]!.id);
+  const [delivery, setDelivery] = useState(DELIVERY_OPTIONS[0]!.id);
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -47,8 +47,8 @@ function ClaimPage() {
   });
   const [error, setError] = useState("");
 
-  const car = useMemo(() => CARS.find((c) => c.id === carId)!, [carId]);
-  const opt = DELIVERY_OPTIONS.find((d) => d.id === delivery)!;
+  const car = useMemo(() => CARS.find((c) => c.id === carId) ?? CARS[0]!, [carId]);
+  const opt = DELIVERY_OPTIONS.find((d) => d.id === delivery) ?? DELIVERY_OPTIONS[0]!;
   const total = car.fee + opt.price;
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
