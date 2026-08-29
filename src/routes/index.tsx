@@ -260,24 +260,7 @@ function Announcement() {
 
       <Reveal delay={100}>
         <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
-          <div className="relative">
-            <img
-              src={model3}
-              alt="Tesla giveaway announcement video still"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="aspect-video w-full object-cover opacity-90"
-            />
-            <div className="absolute inset-0 grid place-items-center">
-              <span className="grid h-16 w-16 place-items-center rounded-full bg-brand/90 text-2xl text-primary-foreground shadow-toast">
-                ▶
-              </span>
-            </div>
-            <p className="absolute right-4 bottom-3 max-w-[45%] text-right text-[11px] leading-snug text-white/70">
-              covers, which hint at the Tesla Cybertruck.
-            </p>
-          </div>
+          <YouTubeEmbed id="XTeWKmlNmN8" title="Tesla official giveaway announcement" />
 
           <div className="bg-shell-raised px-4 py-4">
             <div className="flex items-center justify-between gap-3">
@@ -292,10 +275,9 @@ function Announcement() {
                   <div className="text-xs text-shell-muted">28.4M subscribers</div>
                 </div>
               </div>
-              <button className="rounded-full bg-brand px-5 py-2 text-sm font-bold text-primary-foreground transition-colors hover:bg-brand-strong">
-                Subscribe
-              </button>
+              <SubscribeButton channel="tesla-official" />
             </div>
+
             <div className="mt-4 flex flex-wrap gap-4 text-sm text-shell-muted">
               <span className="flex items-center gap-1.5">
                 <ThumbsUp className="h-4 w-4" /> 1.2M
