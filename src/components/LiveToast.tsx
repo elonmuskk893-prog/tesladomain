@@ -53,8 +53,12 @@ export function LiveToast() {
 
   const p = TOAST_PEOPLE[i]!;
 
-return (
-    <div className="pointer-events-none fixed bottom-4 left-1/2 z-40 w-[82%] max-w-sm -translate-x-1/2 sm:left-5 sm:translate-x-0">
+  return (
+    <div
+      style={{ top: `${top}px` }}
+      className="pointer-events-none fixed left-1/2 z-40 w-[82%] max-w-sm -translate-x-1/2"
+    >
+
 
       <div
         key={i}
