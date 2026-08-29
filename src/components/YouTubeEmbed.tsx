@@ -43,8 +43,8 @@ export function YouTubeEmbed({ id, title }: Props) {
     }
   };
 
-  return (
-    <div className="relative aspect-video w-full bg-black">
+return (
+    <div className="relative aspect-[9/16] w-full bg-black">
       <iframe
         ref={frame}
         src={src}
