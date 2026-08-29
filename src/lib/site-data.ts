@@ -1,9 +1,15 @@
-import model3 from "@/assets/model3.jpg";
-import modely from "@/assets/modely.jpg";
-import models from "@/assets/models.jpg";
-import modelx from "@/assets/modelx.jpg";
-import cybertruck from "@/assets/cybertruck.jpg";
-import roadster from "@/assets/roadster.jpg";
+import model3Asset from "@/assets/model3.jpg.asset.json";
+import modelyAsset from "@/assets/modely.jpg.asset.json";
+import modelsAsset from "@/assets/models.jpg.asset.json";
+import modelxAsset from "@/assets/modelx.jpg.asset.json";
+import cybertruckAsset from "@/assets/cybertruck.jpg.asset.json";
+
+const model3 = model3Asset.url;
+const modely = modelyAsset.url;
+const models = modelsAsset.url;
+const modelx = modelxAsset.url;
+const cybertruck = cybertruckAsset.url;
+const roadster = modelsAsset.url;
 
 export type CarTheme =
   | "navy"
