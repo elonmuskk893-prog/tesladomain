@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { TeslaMark } from "@/components/SiteHeader";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Upload, CheckCircle2 } from "lucide-react";
 import { store, type Submission } from "@/lib/admin-store";
@@ -82,8 +83,8 @@ function PayPage() {
         <Link to="/claim" search={{ car: "" }} aria-label="Back" className="rounded-md p-1 hover:bg-white/10">
           <ArrowLeft className="h-5 w-5" />
         </Link>
-        <span className="grid h-8 w-8 place-items-center rounded-full bg-card text-sm font-black text-brand">
-          T
+<span className="grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-white p-1">
+          <TeslaMark className="h-full w-full" />
         </span>
         <h1 className="text-lg font-bold">Pay ${sub.fee.toFixed(2)}</h1>
       </header>

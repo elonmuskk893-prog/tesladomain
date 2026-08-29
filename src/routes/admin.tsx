@@ -5,12 +5,12 @@ import {
   Inbox,
   CheckCircle2,
   XCircle,
-  Car,
   Send,
   Sparkles,
   Plus,
   Trash2,
 } from "lucide-react";
+import { TeslaMark, TeslaLogo } from "@/components/SiteHeader";
 import {
   ADMIN_EMAIL,
   ADMIN_PASSWORD,
@@ -64,7 +64,10 @@ function AdminPage() {
   return (
     <div className="min-h-screen bg-shell text-shell-fg">
       <nav className="sticky top-0 z-30 overflow-x-auto border-b border-white/10 bg-shell/95 backdrop-blur no-scrollbar">
-        <div className="mx-auto flex max-w-4xl items-center gap-1 px-3 py-3">
+<div className="mx-auto flex max-w-4xl items-center gap-1 px-3 py-3">
+          <span className="mr-1 grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-1">
+            <TeslaMark className="h-full w-full" />
+          </span>
           {TABS.map((t) => (
             <button
               key={t}
@@ -111,8 +114,8 @@ function SignIn({ onDone }: { onDone: () => void }) {
   return (
     <div className="grid min-h-screen place-items-center bg-shell px-5 text-shell-fg">
       <div className="w-full max-w-sm animate-rise text-center">
-        <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-brand text-primary-foreground">
-          <Car className="h-8 w-8" />
+<span className="mx-auto grid h-24 w-24 place-items-center rounded-2xl bg-white p-3">
+          <TeslaLogo className="h-[72px] w-auto" />
         </span>
         <h1 className="mt-6 text-3xl font-black">Tesla Giveaway Admin</h1>
         <p className="mt-2 text-sm text-shell-muted">Sign in with your admin email and password.</p>

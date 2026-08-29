@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import teslaLogo from "@/assets/tesla-logo.png.asset.json";
+import teslaMark from "@/assets/tesla-mark.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -70,14 +71,26 @@ export function SiteHeader() {
   );
 }
 
-export function TeslaMark() {
+export function TeslaMark({ className = "h-10 w-auto" }: { className?: string }) {
+  return (
+    <img
+      src={teslaMark.url}
+      alt="Tesla logo"
+      width={300}
+      height={273}
+      className={`object-contain ${className}`}
+    />
+  );
+}
+
+export function TeslaLogo({ className = "h-12 w-auto" }: { className?: string }) {
   return (
     <img
       src={teslaLogo.url}
       alt="Tesla logo"
-      width={800}
-      height={1024}
-      className="h-10 w-auto object-contain"
+      width={304}
+      height={389}
+      className={`object-contain ${className}`}
     />
   );
 }
