@@ -58,7 +58,7 @@ return (
         type="button"
         onClick={toggleSound}
         aria-label={muted ? "Turn sound on" : "Mute video"}
-        className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full bg-black/70 px-3 py-2 text-xs font-bold text-white backdrop-blur transition-all hover:bg-brand active:scale-95"
+className="absolute top-3 left-3 inline-flex items-center gap-2 rounded-full bg-black/70 px-3 py-2 text-xs font-bold text-white backdrop-blur transition-all hover:bg-brand active:scale-95"
       >
         {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
         {muted ? "Tap for sound" : "Sound on"}
