@@ -9,11 +9,25 @@ export function LiveToast() {
   const [i, setI] = useState(0);
   const [show, setShow] = useState(false);
   const [run, setRun] = useState(false);
+  const [top, setTop] = useState(132);
 
   useEffect(() => {
     const enter = setTimeout(() => setShow(true), 900);
     return () => clearTimeout(enter);
   }, []);
+
+  // Sits just under the trust bar + nav at the top of the page, then rides
+  // along under the sticky header once the visitor starts scrolling.
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      setTop(Math.max(76, 132 - y));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
 
   // While visible: run the progress line, then hide.
   useEffect(() => {
