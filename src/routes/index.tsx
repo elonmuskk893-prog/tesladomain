@@ -150,10 +150,17 @@ function Hero() {
   return (
     <section id="giveaway" className="hero-gradient px-5 pt-16 pb-14">
       <div className="mx-auto max-w-2xl">
-        <div className="inline-flex items-center gap-2 rounded-full bg-success-soft px-4 py-2 text-sm font-bold text-success">
-          <span className="h-2.5 w-2.5 animate-pulse-dot rounded-full bg-success" />
-          LIVE — {joined.toLocaleString()} joined
+        <div className="flex flex-col items-start gap-3">
+          <div className="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 text-sm font-bold text-ink shadow-soft ring-1 ring-border">
+            <span className="h-2.5 w-2.5 animate-pulse-dot rounded-full bg-brand" />
+            Official Event
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full bg-success-soft px-4 py-2 text-sm font-bold text-success">
+            <span className="h-2.5 w-2.5 animate-pulse-dot rounded-full bg-success" />
+            LIVE — {joined.toLocaleString()} joined
+          </div>
         </div>
+
         <h1 className="mt-8 text-5xl leading-[1.02] font-black text-ink sm:text-6xl">
           Win a <span className="text-brand">Brand New</span> Tesla Electric Car
         </h1>
