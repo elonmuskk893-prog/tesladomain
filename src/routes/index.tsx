@@ -64,7 +64,8 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => {
+      (entries) => {
+        const e = entries[0]!;
         if (e.isIntersecting) {
           setSeen(true);
           io.disconnect();
@@ -449,7 +450,7 @@ function Testimonials() {
     const t = setInterval(() => setI((n) => (n + 1) % TESTIMONIALS.length), 5000);
     return () => clearInterval(t);
   }, []);
-  const t = TESTIMONIALS[i];
+  const t = TESTIMONIALS[i]!;
   return (
     <section className="bg-secondary/60 px-5 py-16">
       <Reveal>
@@ -666,7 +667,7 @@ function FutureBanner() {
 function LiveDeliveries() {
   const [rows, setRows] = useState(LIVE_DELIVERIES);
   useEffect(() => {
-    const t = setInterval(() => setRows((r) => [...r.slice(1), r[0]]), 4500);
+    const t = setInterval(() => setRows((r) => [...r.slice(1), r[0]!]), 4500);
     return () => clearInterval(t);
   }, []);
   return (

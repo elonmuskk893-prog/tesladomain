@@ -15,7 +15,7 @@ export function LiveToast() {
     return () => clearInterval(t);
   }, []);
 
-  const p = TOAST_PEOPLE[i];
+  const p = TOAST_PEOPLE[i]!;
   return (
     <div className="pointer-events-none fixed top-3 left-1/2 z-50 w-[92%] max-w-sm -translate-x-1/2">
       {show && (
