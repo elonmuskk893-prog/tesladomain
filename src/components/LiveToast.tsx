@@ -34,16 +34,16 @@ export function LiveToast() {
 
   const p = TOAST_PEOPLE[i]!;
 
-  return (
-    <div className="pointer-events-none fixed bottom-4 left-1/2 z-40 w-[92%] max-w-sm -translate-x-1/2 sm:left-5 sm:translate-x-0">
+return (
+    <div className="pointer-events-none absolute top-full left-1/2 z-40 mt-1.5 w-[82%] max-w-sm -translate-x-1/2">
       <div
         key={i}
         className={`overflow-hidden rounded-2xl bg-card shadow-toast ring-1 ring-border transition-all duration-[450ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
           show ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-3 scale-95 opacity-0"
         }`}
       >
-        <div className="flex items-start gap-3 p-4">
-          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-primary-foreground">
+        <div className="flex items-start gap-3 p-3.5">
+          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-primary-foreground">
             <svg
               viewBox="0 0 24 24"
               className="h-6 w-6"
@@ -64,12 +64,13 @@ export function LiveToast() {
             <span className="mt-1.5 inline-block rounded-full bg-brand-soft px-2.5 py-1 text-xs font-bold text-brand">
               {p.car}
             </span>
-            <div className="mt-2 text-sm leading-snug font-bold text-success">
-              🚗 Car confirmed &amp; dispatched! (${p.fee} fee paid)
+<div className="mt-2 text-sm leading-snug font-bold text-success">
+              🚗 Car confirmed &amp; dispatched!
+              <br />(${p.fee} fee paid)
             </div>
           </div>
         </div>
-        <div className="mx-4 mb-3 h-1.5 overflow-hidden rounded-full bg-secondary">
+        <div className="mx-1.5 mb-2.5 h-1.5 overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full rounded-full bg-brand"
             style={{

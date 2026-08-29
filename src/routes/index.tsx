@@ -103,10 +103,12 @@ function SectionTitle({ pre, hi, post, sub }: { pre?: string; hi: string; post?:
 
 function Home() {
   return (
-    <div className="min-h-screen bg-background pb-24">
-      <TrustBar />
+<div className="min-h-screen bg-background pb-24">
+      <div className="relative z-50">
+        <TrustBar />
+        <LiveToast />
+      </div>
       <SiteHeader />
-      <LiveToast />
       <LangPill />
       <SupportWidget />
 
