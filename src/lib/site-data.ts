@@ -3,13 +3,14 @@ import modelyAsset from "@/assets/modely.jpg.asset.json";
 import modelsAsset from "@/assets/models.jpg.asset.json";
 import modelxAsset from "@/assets/modelx.jpg.asset.json";
 import cybertruckAsset from "@/assets/cybertruck.jpg.asset.json";
+import roadsterAsset from "@/assets/roadster.jpg.asset.json";
 
 const model3 = model3Asset.url;
 const modely = modelyAsset.url;
 const models = modelsAsset.url;
 const modelx = modelxAsset.url;
 const cybertruck = cybertruckAsset.url;
-const roadster = modelsAsset.url;
+const roadster = roadsterAsset.url;
 
 export type CarTheme =
   | "navy"
