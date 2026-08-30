@@ -32,7 +32,7 @@ export function SiteHeader() {
             <div className="flex items-center gap-3">
               <BrandMark />
               <div className="text-2xl font-black">
-                <span className="text-brand">Emmy Autos</span> <span className="text-ink">Autos</span>
+                <span className="text-brand">Emmy</span> <span className="text-ink">Autos</span>
               </div>
             </div>
             <button aria-label="Close" onClick={() => setOpen(false)} className="rounded-md p-2 hover:bg-secondary">
