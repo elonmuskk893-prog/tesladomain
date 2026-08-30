@@ -10,7 +10,7 @@ import {
   Plus,
   Trash2,
 } from "lucide-react";
-import { TeslaMark, TeslaLogo } from "@/components/SiteHeader";
+import { BrandMark, BrandLogo } from "@/components/SiteHeader";
 import {
   ADMIN_EMAIL,
   ADMIN_PASSWORD,
@@ -25,13 +25,13 @@ import { CARS, DELIVERY_OPTIONS } from "@/lib/site-data";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Tesla Giveaway Admin — Entries & Settings" },
+      { title: "Emmy Autos Giveaway Admin — Entries & Settings" },
       {
         name: "description",
         content:
-          "Admin console for the Tesla giveaway: review participant entries, reply to visitor chats, and configure cars, delivery options and payment methods.",
+          "Admin console for the Emmy Autos giveaway: review participant entries, reply to visitor chats, and configure cars, delivery options and payment methods.",
       },
-      { property: "og:title", content: "Tesla Giveaway Admin — Entries & Settings" },
+      { property: "og:title", content: "Emmy Autos Giveaway Admin — Entries & Settings" },
       {
         property: "og:description",
         content: "Review entries, reply to chats and configure the public giveaway page.",
@@ -66,7 +66,7 @@ function AdminPage() {
       <nav className="sticky top-0 z-30 overflow-x-auto border-b border-white/10 bg-shell/95 backdrop-blur no-scrollbar">
 <div className="mx-auto flex max-w-4xl items-center gap-1 px-3 py-3">
           <span className="mr-1 grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-1">
-            <TeslaMark className="h-full w-full" />
+            <BrandMark className="h-full w-full" />
           </span>
           {TABS.map((t) => (
             <button
@@ -115,9 +115,9 @@ function SignIn({ onDone }: { onDone: () => void }) {
     <div className="grid min-h-screen place-items-center bg-shell px-5 text-shell-fg">
       <div className="w-full max-w-sm animate-rise text-center">
 <span className="mx-auto grid h-24 w-24 place-items-center rounded-2xl bg-white p-3">
-          <TeslaLogo className="h-[72px] w-auto" />
+          <BrandLogo className="h-[72px] w-auto" />
         </span>
-        <h1 className="mt-6 text-3xl font-black">Tesla Giveaway Admin</h1>
+        <h1 className="mt-6 text-3xl font-black">Emmy Autos Giveaway Admin</h1>
         <p className="mt-2 text-sm text-shell-muted">Sign in with your admin email and password.</p>
         <form
           onSubmit={(e) => {
@@ -469,11 +469,11 @@ function Settings() {
         title="Cars"
         blurb="The Fee is the car's price — what the visitor pays for that car (a delivery-speed fee is added on top)."
         onLoadDefaults={() => setCars(CARS.map((c) => ({ id: c.id, name: c.name, fee: c.fee })))}
-        onAdd={() => setCars((r) => [...r, { id: crypto.randomUUID(), name: "New Tesla", fee: 0 }])}
+        onAdd={() => setCars((r) => [...r, { id: crypto.randomUUID(), name: "New Emmy Autos", fee: 0 }])}
       >
         {cars.length === 0 ? (
           <Empty>
-            No cars — the public site shows the built-in Tesla lineup until you add your own. Tap “Load
+            No cars — the public site shows the built-in Emmy Autos lineup until you add your own. Tap “Load
             defaults” to import the full lineup and edit every price.
           </Empty>
         ) : (
