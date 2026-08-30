@@ -762,7 +762,7 @@ function SiteFooter() {
             <BrandLogo className="h-[48px] w-auto" />
           </span>
           <div className="text-3xl font-black">
-            <span className="text-brand">Emmy Autos</span> Motors
+            <span className="text-brand">Emmy</span> Autos
           </div>
         </div>
         <nav className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-shell-muted">

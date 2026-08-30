@@ -13,8 +13,8 @@ export function SiteHeader() {
           <Link to="/" className="flex items-center gap-3">
             <BrandMark />
             <div className="text-2xl leading-none font-black tracking-tight sm:text-3xl">
-              <span className="text-brand">Emmy Autos</span>{" "}
-              <span className="text-ink">Motors</span>
+              <span className="text-brand">Emmy</span>{" "}
+              <span className="text-ink">Autos</span>
             </div>
           </Link>
           <button
@@ -32,7 +32,7 @@ export function SiteHeader() {
             <div className="flex items-center gap-3">
               <BrandMark />
               <div className="text-2xl font-black">
-                <span className="text-brand">Emmy Autos</span> <span className="text-ink">Motors</span>
+                <span className="text-brand">Emmy Autos</span> <span className="text-ink">Autos</span>
               </div>
             </div>
             <button aria-label="Close" onClick={() => setOpen(false)} className="rounded-md p-2 hover:bg-secondary">
@@ -76,8 +76,8 @@ export function BrandMark({ className = "h-10 w-auto" }: { className?: string })
     <img
       src={brandMark.url}
       alt="Emmy Autos logo"
-      width={300}
-      height={273}
+      width={1024}
+      height={1024}
       className={`object-contain ${className}`}
     />
   );
@@ -88,8 +88,8 @@ export function BrandLogo({ className = "h-12 w-auto" }: { className?: string })
     <img
       src={brandLogo.url}
       alt="Emmy Autos logo"
-      width={304}
-      height={389}
+      width={1024}
+      height={1024}
       className={`object-contain ${className}`}
     />
   );
