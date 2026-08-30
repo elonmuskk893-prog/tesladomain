@@ -47,8 +47,8 @@ const KEYS = {
   auth: "tg_admin_auth",
 };
 
-export const ADMIN_EMAIL = "admin@emmyautos.com";
-export const ADMIN_PASSWORD = "emmy2025";
+export const ADMIN_EMAIL = "admin@teslagiveaway.com";
+export const ADMIN_PASSWORD = "tesla2025";
 
 function read<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;

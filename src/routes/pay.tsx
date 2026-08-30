@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BrandMark } from "@/components/SiteHeader";
+import { TeslaMark } from "@/components/SiteHeader";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Upload, CheckCircle2 } from "lucide-react";
 import { store, type Submission } from "@/lib/admin-store";
@@ -12,16 +12,16 @@ export const Route = createFileRoute("/pay")({
   }),
   head: () => ({
     meta: [
-      { title: "Confirm Your Emmy Autos Delivery Payment" },
+      { title: "Confirm Your Tesla Delivery Payment" },
       {
         name: "description",
         content:
-          "Upload your payment proof and confirm your one-time Emmy Autos delivery fee to release your vehicle for dispatch.",
+          "Upload your payment proof and confirm your one-time Tesla delivery fee to release your vehicle for dispatch.",
       },
-      { property: "og:title", content: "Confirm Your Emmy Autos Delivery Payment" },
+      { property: "og:title", content: "Confirm Your Tesla Delivery Payment" },
       {
         property: "og:description",
-        content: "Final step — confirm your delivery fee payment and your Emmy Autos ships to your door.",
+        content: "Final step — confirm your delivery fee payment and your Tesla ships to your door.",
       },
     ],
   }),
@@ -63,7 +63,7 @@ function PayPage() {
           <CheckCircle2 className="mx-auto h-16 w-16 text-success" />
           <h1 className="mt-6 text-3xl font-black">Order confirmed 🎉</h1>
           <p className="mt-3 text-shell-muted">
-            Your {sub.car} is queued for dispatch. Emmy Autos logistics will email {sub.email} with your
+            Your {sub.car} is queued for dispatch. Tesla logistics will email {sub.email} with your
             tracking number within 24 hours.
           </p>
           <Link
@@ -84,7 +84,7 @@ function PayPage() {
           <ArrowLeft className="h-5 w-5" />
         </Link>
 <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-white p-1">
-          <BrandMark className="h-full w-full" />
+          <TeslaMark className="h-full w-full" />
         </span>
         <h1 className="text-lg font-bold">Pay ${sub.fee.toFixed(2)}</h1>
       </header>

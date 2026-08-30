@@ -53,13 +53,13 @@ export function SupportWidget() {
       {open && (
         <div className="fixed right-4 bottom-24 z-40 flex max-h-[70vh] w-[min(22rem,calc(100vw-2rem))] animate-rise flex-col overflow-hidden rounded-3xl bg-card shadow-toast ring-1 ring-border">
           <div className="bg-shell px-4 py-3 text-shell-fg">
-            <p className="font-bold">Emmy Autos Support</p>
+            <p className="font-bold">Tesla Support</p>
             <p className="text-xs text-shell-muted">We usually reply in a few minutes</p>
           </div>
           <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
             {!convo && (
               <p className="rounded-2xl bg-secondary px-3 py-2 text-sm text-ink-soft">
-                Hi 👋 Ask us anything about your Emmy Autos claim.
+                Hi 👋 Ask us anything about your Tesla claim.
               </p>
             )}
             {convo?.messages.map((m) => (

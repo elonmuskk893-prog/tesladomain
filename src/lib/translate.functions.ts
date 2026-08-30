@@ -24,7 +24,7 @@ export const translateTexts = createServerFn({ method: "POST" })
           {
             role: "system",
             content:
-              "You are a website localization engine. Translate each string of the JSON array into the requested language. Keep emoji, numbers, currency symbols, brand names (Emmy Autos, Emmy E3, Emmy Y7, Emmy Titan, Emmy Velocity) and formatting untouched. Do not add or remove array items. Reply with ONLY a JSON array of translated strings in the same order.",
+              "You are a website localization engine. Translate each string of the JSON array into the requested language. Keep emoji, numbers, currency symbols, brand names (Tesla, Model 3, Model Y, Cybertruck, Roadster) and formatting untouched. Do not add or remove array items. Reply with ONLY a JSON array of translated strings in the same order.",
           },
           {
             role: "user",

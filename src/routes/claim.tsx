@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { BrandMark } from "@/components/SiteHeader";
+import { TeslaMark } from "@/components/SiteHeader";
 import { useMemo, useState } from "react";
 import { ArrowLeft, User, MapPin, ChevronsUpDown, Truck, Clock } from "lucide-react";
 import { CARS, DELIVERY_OPTIONS } from "@/lib/site-data";
@@ -13,16 +13,16 @@ export const Route = createFileRoute("/claim")({
   }),
   head: () => ({
     meta: [
-      { title: "Claim Your Emmy Autos — Delivery Details" },
+      { title: "Claim Your Tesla — Delivery Details" },
       {
         name: "description",
         content:
-          "You've been selected. Enter your delivery details, pick your Emmy Autos model and delivery speed, then confirm your one-time delivery fee.",
+          "You've been selected. Enter your delivery details, pick your Tesla model and delivery speed, then confirm your one-time delivery fee.",
       },
-      { property: "og:title", content: "Claim Your Emmy Autos — Delivery Details" },
+      { property: "og:title", content: "Claim Your Tesla — Delivery Details" },
       {
         property: "og:description",
-        content: "Fill in your delivery details to have your brand new Emmy Autos shipped to your door.",
+        content: "Fill in your delivery details to have your brand new Tesla shipped to your door.",
       },
     ],
   }),
@@ -82,9 +82,9 @@ function ClaimPage() {
           <ArrowLeft className="h-5 w-5" />
         </Link>
 <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-white p-1">
-          <BrandMark className="h-full w-full" />
+          <TeslaMark className="h-full w-full" />
         </span>
-        <h1 className="text-lg font-bold">Emmy Autos Car Giveaway — Claim Your Car</h1>
+        <h1 className="text-lg font-bold">Tesla Car Giveaway — Claim Your Car</h1>
       </header>
 
       <main className="mx-auto max-w-xl space-y-5 px-4 py-6">
@@ -103,7 +103,7 @@ function ClaimPage() {
           </div>
         </div>
 
-        <Panel icon={<Truck className="h-4 w-4 text-brand" />} title="Choose Your Emmy Autos Car Model">
+        <Panel icon={<Truck className="h-4 w-4 text-brand" />} title="Choose Your Tesla Car Model">
           <div className="relative">
             <select
               value={carId}

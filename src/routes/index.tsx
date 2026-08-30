@@ -16,7 +16,7 @@ import {
   BadgeCheck,
   CheckCircle2,
 } from "lucide-react";
-import { SiteHeader, BrandMark, BrandLogo } from "@/components/SiteHeader";
+import { SiteHeader, TeslaMark, TeslaLogo } from "@/components/SiteHeader";
 import { LiveToast } from "@/components/LiveToast";
 import { LangPill } from "@/components/LangPill";
 import { Countdown } from "@/components/Countdown";
@@ -32,25 +32,27 @@ import {
   THEME_STYLES,
   TRUST_ITEMS,
 } from "@/lib/site-data";
+import ceoAsset from "@/assets/elon-musk.jpg.asset.json";
 import { XLogo, InstagramLogo, FacebookLogo } from "@/components/SocialIcons";
 
+const ceo = ceoAsset.url;
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { SubscribeButton } from "@/components/SubscribeButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Win a Brand New Emmy Autos Electric Car — Global Giveaway" },
+      { title: "Win a Brand New Tesla Electric Car — Global Giveaway" },
       {
         name: "description",
         content:
-          "Emmy Autos is giving away brand new 2025 electric cars worldwide. Choose your Emmy E3, Y7, S9, X8 or Titan and just cover the one-time delivery fee.",
+          "Tesla is giving away brand new 2025 electric cars worldwide. Choose your Model 3, Model Y, Model S, Model X or Cybertruck and just cover the one-time delivery fee.",
       },
-      { property: "og:title", content: "Win a Brand New Emmy Autos Electric Car — Global Giveaway" },
+      { property: "og:title", content: "Win a Brand New Tesla Electric Car — Global Giveaway" },
       {
         property: "og:description",
         content:
-          "Claim a brand new 2025 Emmy Autos. 10,000+ cars already delivered worldwide — only the one-time delivery fee applies.",
+          "Claim a brand new 2025 Tesla. 10,000+ cars already delivered worldwide — only the one-time delivery fee applies.",
       },
     ],
   }),
@@ -165,10 +167,10 @@ function Hero() {
         </div>
 
         <h1 className="mt-8 text-5xl leading-[1.02] font-black text-ink sm:text-6xl">
-          Win a <span className="text-brand">Brand New</span> Emmy Autos Electric Car
+          Win a <span className="text-brand">Brand New</span> Tesla Electric Car
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-          Emmy Autos, the world's leading electric vehicle manufacturer, is giving away brand new electric
+          Tesla, the world's leading electric vehicle manufacturer, is giving away brand new electric
           cars to participants worldwide. Claim your car today!
         </p>
         <div className="mt-8 space-y-3">
@@ -209,9 +211,9 @@ function CarPicker() {
       <Reveal>
         <SectionTitle
           pre="Available"
-          hi="Emmy Autos"
+          hi="Tesla"
           post="Cars"
-          sub="Choose your preferred Emmy Autos electric car. All models are brand new 2024–2025 editions delivered straight to your door."
+          sub="Choose your preferred Tesla electric car. All models are brand new 2024–2025 editions delivered straight to your door."
         />
       </Reveal>
       <div className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2">
@@ -259,10 +261,10 @@ function Announcement() {
             Official Announcement
           </span>
           <h2 className="mt-6 text-4xl font-black leading-tight sm:text-5xl">
-            Emmy Autos' <span className="text-brand">Global Car</span> Giveaway
+            Tesla's <span className="text-brand">Global Car</span> Giveaway
           </h2>
           <p className="mt-4 leading-relaxed text-shell-muted">
-            Watch Emmy Autos' official announcement of their biggest car giveaway for all countries
+            Watch Tesla's official announcement of their biggest car giveaway for all countries
             worldwide.
           </p>
         </div>
@@ -270,22 +272,22 @@ function Announcement() {
 
       <Reveal delay={100}>
         <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
-          <YouTubeEmbed id="XTeWKmlNmN8" title="Emmy Autos official giveaway announcement" />
+          <YouTubeEmbed id="XTeWKmlNmN8" title="Tesla official giveaway announcement" />
 
           <div className="bg-shell-raised px-4 py-4">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
 <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white p-1">
-                  <BrandMark className="h-full w-full" />
+                  <TeslaMark className="h-full w-full" />
                 </span>
                 <div>
                   <div className="flex items-center gap-1 text-sm font-bold">
-                    Emmy Autos Official <BadgeCheck className="h-4 w-4 text-info" />
+                    Tesla Official <BadgeCheck className="h-4 w-4 text-info" />
                   </div>
                   <div className="text-xs text-shell-muted">28.4M subscribers</div>
                 </div>
               </div>
-              <SubscribeButton channel="emmy-official" />
+              <SubscribeButton channel="tesla-official" />
             </div>
 
             <div className="mt-4 flex flex-wrap gap-4 text-sm text-shell-muted">
@@ -364,26 +366,26 @@ function WinnersProof() {
             More <span className="text-brand">Proof</span> from Winners
           </h2>
           <p className="mt-4 leading-relaxed text-shell-muted">
-            Watch real testimonials from Emmy Autos car recipients around the world.
+            Watch real testimonials from Tesla car recipients around the world.
           </p>
         </div>
       </Reveal>
 
       <Reveal delay={100}>
         <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-3xl bg-black ring-1 ring-shell-line">
-          <YouTubeEmbed id="XDkzm_LR0Co" title="Emmy Autos Global winner testimonials" />
+          <YouTubeEmbed id="XDkzm_LR0Co" title="Tesla Global winner testimonials" />
           <div className="bg-shell-raised px-4 py-4">
             <div className="flex items-center justify-between gap-3">
               <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-white p-1">
-                <BrandMark className="h-full w-full" />
+                <TeslaMark className="h-full w-full" />
               </span>
               <div className="mr-auto">
                 <div className="flex items-center gap-1 text-sm font-bold">
-                  Emmy Autos Global <BadgeCheck className="h-4 w-4 text-info" />
+                  Tesla Global <BadgeCheck className="h-4 w-4 text-info" />
                 </div>
                 <div className="text-xs text-shell-muted">12.8M subscribers</div>
               </div>
-              <SubscribeButton channel="emmy-global" />
+              <SubscribeButton channel="tesla-global" />
             </div>
           </div>
           <CommentsList />
@@ -399,31 +401,35 @@ function CeoSection() {
       <Reveal>
         <SectionTitle
           pre="Straight from the"
-          hi="Team"
-          sub="Official announcements from Emmy Autos' leadership"
+          hi="CEO"
+          sub="Official announcements from Tesla's leadership"
         />
       </Reveal>
       <div className="mx-auto mt-10 max-w-xl space-y-5">
         <Reveal>
           <article className="rounded-3xl border border-border bg-card p-5 shadow-soft">
             <header className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white p-1 ring-1 ring-border">
-                <BrandMark className="h-full w-full" />
-              </span>
+              <img
+                src={ceo}
+                alt="Elon Musk"
+                loading="lazy"
+                width={512}
+                height={512}
+                className="h-11 w-11 rounded-full object-cover"
+              />
               <div>
                 <div className="flex items-center gap-1 font-bold text-ink">
-                  Emmy Autos <BadgeCheck className="h-4 w-4 text-info" />
+                  Elon Musk <BadgeCheck className="h-4 w-4 text-info" />
                 </div>
-                <div className="text-sm text-ink-soft">Leadership Team</div>
+                <div className="text-sm text-ink-soft">CEO, Tesla, Inc.</div>
               </div>
             </header>
             <p className="mt-4 leading-relaxed text-ink">
-              Emmy Autos is committed to accelerating the world's transition to sustainable energy. As part
+              Tesla is committed to accelerating the world's transition to sustainable energy. As part
               of our mission, we're launching a worldwide giveaway of our electric vehicles —
-              completely free. Just cover the delivery cost and a brand-new Emmy Autos car will be shipped
+              completely free. Just cover the delivery cost and a brand-new Tesla will be shipped
               directly to your door. 🚗⚡
             </p>
-
             <footer className="mt-4 flex gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
                 <Heart className="h-4 w-4 text-brand" /> 128K
@@ -441,19 +447,19 @@ function CeoSection() {
           <article className="rounded-3xl border border-border bg-card p-5 shadow-soft">
             <header className="flex items-center gap-3">
 <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white p-1">
-                <BrandMark className="h-full w-full" />
+                <TeslaMark className="h-full w-full" />
               </span>
               <div>
                 <div className="flex items-center gap-1 font-bold text-ink">
-                  Emmy Autos Official <BadgeCheck className="h-4 w-4 text-info" />
+                  Tesla Official <BadgeCheck className="h-4 w-4 text-info" />
                 </div>
-                <div className="text-sm text-ink-soft">@EmmyAutos · Official Account</div>
+                <div className="text-sm text-ink-soft">@Tesla · Official Account</div>
               </div>
             </header>
             <p className="mt-4 leading-relaxed text-ink">
-              🏁 OFFICIAL ANNOUNCEMENT: Our global Emmy Autos car giveaway is NOW LIVE! 🌍 Open to ALL
-              countries. No purchase necessary — just cover the one-time delivery fee. Emmy E3, Model
-              Y, Emmy S9, Emmy X8 and more available. Don't miss out! 🎁🚗
+              🏁 OFFICIAL ANNOUNCEMENT: Our global Tesla car giveaway is NOW LIVE! 🌍 Open to ALL
+              countries. No purchase necessary — just cover the one-time delivery fee. Model 3, Model
+              Y, Model S, Model X and more available. Don't miss out! 🎁🚗
             </p>
             <footer className="mt-4 flex gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
@@ -483,7 +489,7 @@ function Testimonials() {
   return (
     <section className="bg-secondary/60 px-5 py-16">
       <Reveal>
-        <SectionTitle pre="What" hi="Winners" post="Are Saying" sub="Real testimonials from verified Emmy Autos car recipients" />
+        <SectionTitle pre="What" hi="Winners" post="Are Saying" sub="Real testimonials from verified Tesla car recipients" />
       </Reveal>
       <div className="mx-auto mt-10 max-w-xl">
         <article
@@ -527,7 +533,7 @@ function SocialSection() {
   return (
     <section className="px-5 py-16">
       <Reveal>
-        <SectionTitle pre="Follow" hi="Emmy Autos" post="Official" sub="Verified official social media accounts of Emmy Autos worldwide." />
+        <SectionTitle pre="Follow" hi="Tesla" post="Official" sub="Verified official social media accounts of Tesla worldwide." />
       </Reveal>
       <div className="mx-auto mt-10 max-w-xl space-y-4">
         {SOCIALS.map((s, idx) => {
@@ -538,11 +544,11 @@ function SocialSection() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Open Emmy Autos on ${s.brand}`}
+                aria-label={`Open Tesla on ${s.brand}`}
                 className="flex items-center gap-4 rounded-3xl border border-border bg-card p-5 shadow-soft transition-transform hover:-translate-y-0.5 active:scale-[0.99]"
               >
                 <span className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1">
-                  <BrandMark className="h-full w-full" />
+                  <TeslaMark className="h-full w-full" />
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1 font-bold text-ink">
@@ -571,8 +577,8 @@ function HowToClaim() {
       <Reveal>
         <SectionTitle
           pre="How to Claim Your"
-          hi="Emmy Autos Car"
-          sub="Follow these simple steps to receive your brand new Emmy Autos electric car giveaway"
+          hi="Tesla Car"
+          sub="Follow these simple steps to receive your brand new Tesla electric car giveaway"
         />
       </Reveal>
       <div className="mx-auto mt-10 max-w-xl space-y-4">
@@ -595,7 +601,7 @@ function HowToClaim() {
             search={{ car: "" }}
             className="flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-5 text-center text-lg font-bold text-primary-foreground shadow-card transition-transform hover:bg-brand-strong active:scale-[0.98]"
           >
-            🚗 Start Claiming Your Emmy Autos Now →
+            🚗 Start Claiming Your Tesla Now →
           </Link>
         </div>
       </Reveal>
@@ -609,13 +615,13 @@ function ModelCatalog() {
       <Reveal>
         <div className="text-center">
           <span className="inline-flex rounded-full bg-brand-soft px-4 py-2 text-xs font-bold tracking-widest uppercase text-brand">
-            ⭐ Official Emmy Autos Global Giveaway
+            ⭐ Official Tesla Global Giveaway
           </span>
         </div>
       </Reveal>
       <Reveal delay={60}>
         <div className="mt-6">
-          <SectionTitle pre="Choose Your" hi="Emmy Autos Electric Car" sub="Emmy Autos is gifting brand new electric vehicles to participants worldwide." />
+          <SectionTitle pre="Choose Your" hi="Tesla Electric Car" sub="Tesla is gifting brand new electric vehicles to participants worldwide." />
         </div>
       </Reveal>
       <Reveal delay={120}>
@@ -665,7 +671,7 @@ function ModelCatalog() {
                   search={{ car: car.id }}
                   className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-4 font-bold text-primary-foreground transition-transform hover:bg-brand-strong active:scale-[0.98]"
                 >
-                  🚗 Claim This Emmy Autos Now →
+                  🚗 Claim This Tesla Now →
                 </Link>
               </div>
             </article>
@@ -693,9 +699,9 @@ function FutureBanner() {
     <section className="px-5 py-10">
       <Reveal>
         <div className="mx-auto max-w-xl rounded-3xl bg-brand px-6 py-8 text-center text-primary-foreground shadow-card">
-          <h3 className="text-2xl font-black leading-snug">⚡ Emmy Autos Electric — Built for the Future</h3>
+          <h3 className="text-2xl font-black leading-snug">⚡ Tesla Electric — Built for the Future</h3>
           <p className="mt-3 leading-relaxed text-primary-foreground/90">
-            Emmy Autos is the world's <strong>leading electric vehicle manufacturer</strong>. Each
+            Tesla is the world's <strong>leading electric vehicle manufacturer</strong>. Each
             participant is eligible for <strong>one vehicle only</strong>.
           </p>
         </div>
@@ -716,7 +722,7 @@ function LiveDeliveries() {
         <SectionTitle
           pre="Live"
           hi="Deliveries"
-          sub="Real-time updates of Emmy Autos car deliveries happening right now across the world."
+          sub="Real-time updates of Tesla car deliveries happening right now across the world."
         />
       </Reveal>
       <Reveal delay={80}>
@@ -759,10 +765,10 @@ function SiteFooter() {
       <div className="mx-auto max-w-xl">
 <div className="flex items-center justify-center gap-3">
 <span className="grid h-16 w-16 place-items-center rounded-2xl bg-white p-2">
-            <BrandLogo className="h-[48px] w-auto" />
+            <TeslaLogo className="h-[48px] w-auto" />
           </span>
           <div className="text-3xl font-black">
-            <span className="text-brand">Emmy</span> Autos
+            <span className="text-brand">Tesla</span> Motors
           </div>
         </div>
         <nav className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-shell-muted">
@@ -773,7 +779,7 @@ function SiteFooter() {
           ))}
         </nav>
         <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs font-semibold">
-          {["🔒 SSL Secured", "🚗 Emmy Certified", "⚡ Electric Vehicle", "✅ 10,000+ Delivered", "🌍 Official Event"].map(
+          {["🔒 SSL Secured", "🚗 Tesla Certified", "⚡ Electric Vehicle", "✅ 10,000+ Delivered", "🌍 Official Event"].map(
             (b) => (
               <span key={b} className="rounded-full bg-shell-raised px-4 py-2 ring-1 ring-shell-line">
                 {b}
@@ -782,11 +788,11 @@ function SiteFooter() {
           )}
         </div>
         <p className="mt-8 text-sm leading-relaxed text-shell-muted">
-          This is an official Emmy Autos global car giveaway event. Emmy Autos is the world's leading
+          This is an official Tesla Motors global car giveaway event. Tesla is the world's leading
           electric vehicle manufacturer gifting brand new electric vehicles to participants worldwide.
         </p>
         <p className="mt-6 text-xs text-shell-muted">
-          © 2026 Emmy Autos Official Giveaway. All rights reserved.
+          © 2026 Tesla Motors Official Giveaway. All rights reserved.
         </p>
         <Link to="/admin" className="mt-4 inline-block text-xs text-shell-muted/70 hover:text-shell-fg">
           Admin
