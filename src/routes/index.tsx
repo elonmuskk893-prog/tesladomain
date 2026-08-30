@@ -32,10 +32,8 @@ import {
   THEME_STYLES,
   TRUST_ITEMS,
 } from "@/lib/site-data";
-import ceoAsset from "@/assets/elon-musk.jpg.asset.json";
 import { XLogo, InstagramLogo, FacebookLogo } from "@/components/SocialIcons";
 
-const ceo = ceoAsset.url;
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { SubscribeButton } from "@/components/SubscribeButton";
 
