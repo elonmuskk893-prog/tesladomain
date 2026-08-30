@@ -118,8 +118,8 @@ export const LIVE_DELIVERIES = [
 
 export const SOCIALS = [
   { name: "Emmy Autos Official", handle: "@EmmyAutos · Official Account", brand: "x" as const, followers: "28.4M followers", label: "Official Emmy Autos X account.", url: "https://x.com/emmy?s=21", accent: "bg-black text-white" },
-  { name: "Emmy Autos", handle: "@EmmyAutos", brand: "facebook" as const, followers: "14.2M likes", label: "Official Emmy Autos Facebook page.", url: "https://www.facebook.com/share/1BiupCjt4G/?mibextid=wwXIfr", accent: "bg-[oklch(0.5_0.18_252)] text-white" },
-  { name: "Emmy Autos", handle: "@emmyautos", brand: "instagram" as const, followers: "12.8M followers", label: "Official Emmy Autos Instagram.", url: "https://www.instagram.com/teslamotors?igsi=dzRkOHh2Z3ozNDRj", accent: "bg-gradient-to-tr from-fuchsia-500 via-rose-500 to-amber-400 text-white" },
+  { name: "Emmy Autos", handle: "@EmmyAutos", brand: "facebook" as const, followers: "14.2M likes", label: "Official Emmy Autos Facebook page.", url: "https://www.facebook.com/emmyautos", accent: "bg-[oklch(0.5_0.18_252)] text-white" },
+  { name: "Emmy Autos", handle: "@emmyautos", brand: "instagram" as const, followers: "12.8M followers", label: "Official Emmy Autos Instagram.", url: "https://www.instagram.com/emmyautos", accent: "bg-gradient-to-tr from-fuchsia-500 via-rose-500 to-amber-400 text-white" },
 ];
 
 
