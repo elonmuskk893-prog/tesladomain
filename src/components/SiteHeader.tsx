@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import teslaLogo from "@/assets/tesla-logo.png.asset.json";
-import teslaMark from "@/assets/tesla-mark.png.asset.json";
+import brandLogo from "@/assets/emmy-logo.png.asset.json";
+import brandMark from "@/assets/emmy-mark.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -11,9 +11,9 @@ export function SiteHeader() {
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-4">
           <Link to="/" className="flex items-center gap-3">
-            <TeslaMark />
+            <BrandMark />
             <div className="text-2xl leading-none font-black tracking-tight sm:text-3xl">
-              <span className="text-brand">Tesla</span>{" "}
+              <span className="text-brand">Emmy Autos</span>{" "}
               <span className="text-ink">Motors</span>
             </div>
           </Link>
@@ -30,9 +30,9 @@ export function SiteHeader() {
         <div className="fixed inset-0 z-50 flex flex-col bg-background animate-rise">
           <div className="flex items-center justify-between border-b border-border px-5 py-4">
             <div className="flex items-center gap-3">
-              <TeslaMark />
+              <BrandMark />
               <div className="text-2xl font-black">
-                <span className="text-brand">Tesla</span> <span className="text-ink">Motors</span>
+                <span className="text-brand">Emmy Autos</span> <span className="text-ink">Motors</span>
               </div>
             </div>
             <button aria-label="Close" onClick={() => setOpen(false)} className="rounded-md p-2 hover:bg-secondary">
@@ -71,11 +71,11 @@ export function SiteHeader() {
   );
 }
 
-export function TeslaMark({ className = "h-10 w-auto" }: { className?: string }) {
+export function BrandMark({ className = "h-10 w-auto" }: { className?: string }) {
   return (
     <img
-      src={teslaMark.url}
-      alt="Tesla logo"
+      src={brandMark.url}
+      alt="Emmy Autos logo"
       width={300}
       height={273}
       className={`object-contain ${className}`}
@@ -83,11 +83,11 @@ export function TeslaMark({ className = "h-10 w-auto" }: { className?: string })
   );
 }
 
-export function TeslaLogo({ className = "h-12 w-auto" }: { className?: string }) {
+export function BrandLogo({ className = "h-12 w-auto" }: { className?: string }) {
   return (
     <img
-      src={teslaLogo.url}
-      alt="Tesla logo"
+      src={brandLogo.url}
+      alt="Emmy Autos logo"
       width={304}
       height={389}
       className={`object-contain ${className}`}

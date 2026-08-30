@@ -78,13 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tesla Motors — Global Car Giveaway" },
+      { title: "Emmy Autos — Global Car Giveaway" },
       {
         name: "description",
         content:
-          "Official Tesla Motors global electric car giveaway. Claim a brand new 2025 Tesla — just cover the one-time delivery fee.",
+          "Official Emmy Autos global electric car giveaway. Claim a brand new 2025 Emmy Autos — just cover the one-time delivery fee.",
       },
-      { name: "author", content: "Tesla Motors Official Giveaway" },
+      { name: "author", content: "Emmy Autos Official Giveaway" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

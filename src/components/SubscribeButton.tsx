@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Check } from "lucide-react";
 
 export function SubscribeButton({ channel }: { channel: string }) {
-  const key = `tesla-subscribed:${channel}`;
+  const key = `emmy-subscribed:${channel}`;
   const [subscribed, setSubscribed] = useState(false);
 
   useEffect(() => {
