@@ -401,7 +401,7 @@ function CeoSection() {
       <Reveal>
         <SectionTitle
           pre="Straight from the"
-          hi="CEO"
+          hi="Team"
           sub="Official announcements from Emmy Autos' leadership"
         />
       </Reveal>
@@ -409,27 +409,23 @@ function CeoSection() {
         <Reveal>
           <article className="rounded-3xl border border-border bg-card p-5 shadow-soft">
             <header className="flex items-center gap-3">
-              <img
-                src={ceo}
-                alt="Emmy Autos"
-                loading="lazy"
-                width={512}
-                height={512}
-                className="h-11 w-11 rounded-full object-cover"
-              />
+              <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white p-1 ring-1 ring-border">
+                <BrandMark className="h-full w-full" />
+              </span>
               <div>
                 <div className="flex items-center gap-1 font-bold text-ink">
                   Emmy Autos <BadgeCheck className="h-4 w-4 text-info" />
                 </div>
-                <div className="text-sm text-ink-soft">CEO, Emmy Autos</div>
+                <div className="text-sm text-ink-soft">Leadership Team</div>
               </div>
             </header>
             <p className="mt-4 leading-relaxed text-ink">
               Emmy Autos is committed to accelerating the world's transition to sustainable energy. As part
               of our mission, we're launching a worldwide giveaway of our electric vehicles —
-              completely free. Just cover the delivery cost and a brand-new Emmy Autos will be shipped
+              completely free. Just cover the delivery cost and a brand-new Emmy Autos car will be shipped
               directly to your door. 🚗⚡
             </p>
+
             <footer className="mt-4 flex gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
                 <Heart className="h-4 w-4 text-brand" /> 128K
